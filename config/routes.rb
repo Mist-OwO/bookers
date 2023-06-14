@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'books/show'
   get 'books/edit'
   get 'books/new'
-  post 'books' => 'books#create'
   get 'top' => 'homes#top'
+  post 'books' => 'books#create'
+  get 'books/:id' => 'books#show', as: 'book'
 end
